@@ -14,6 +14,7 @@ const Draft: React.FC = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
+        credentials: 'include',
       });
       await Router.push('/drafts');
     } catch (error) {
